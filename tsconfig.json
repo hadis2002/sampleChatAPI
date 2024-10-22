@@ -1,0 +1,30 @@
+// {
+//   "files": [],
+//   "references": [
+//     { "path": "./tsconfig.app.json" },
+//     { "path": "./tsconfig.node.json" },
+//   ]
+// }
+{
+  "compilerOptions": {
+    "target": "esnext",                         // نسخه جاوااسکریپت که کامپایل شود
+    "module": "esnext",                         // نوع ماژول که استفاده شود
+    "moduleResolution": "node",                 // نحوه حل ماژول‌ها
+    "esModuleInterop": true,                    // برای پشتیبانی از کامپایل ماژول‌های ES
+    "allowJs": true,                            // اجازه دادن به فایل‌های JavaScript
+    "skipLibCheck": true,                       // صرف نظر کردن از بررسی تایپ‌های کتابخانه‌ها
+    "forceConsistentCasingInFileNames": true,   // اجبار به یکسان بودن حروف در نام فایل‌ها
+    "strict": true,                             // فعال‌سازی حالت strict در تایپ‌اسکریپت
+    "types": ["vite/client", "vue"],            // تایپ‌های مربوط به Vue و Vite
+    "baseUrl": ".",                             // پایه‌گذاری مسیرها از ریشه پروژه
+    "paths": {
+      "@/*": ["src/*"]                          // مسیرهای کوتاه برای استفاده از `@` در واردات
+    },
+    "lib": ["dom", "esnext"],                   // کتابخانه‌ها برای دسترسی به امکانات DOM و ES
+    "jsx": "preserve"                          // حفظ JSX برای پروژه‌های Vue
+  },
+  "include": [
+    "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"
+  ], // فایل‌هایی که باید بررسی شوند
+  "exclude": ["node_modules"]                 // پوشه‌هایی که از بررسی خارج می‌شوند
+}
